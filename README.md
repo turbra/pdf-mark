@@ -38,7 +38,7 @@ $ pip install pymupdf4llm
 $ mkdir -p pdfs && mv ~/Downloads/*.pdf pdfs/
 
 # 3 / convert
-$ python convert_pdf_to_md.py            # uses defaults (./pdfs, ./markdown, markdown.zip)
+$ python convert.py            # uses defaults (./pdfs, ./markdown, markdown.zip)
 
 # 4 / upload markdown.zip to OpenWebUI → Knowledge or import into your own RAG pipeline 🎉
 ```
@@ -46,7 +46,7 @@ $ python convert_pdf_to_md.py            # uses defaults (./pdfs, ./markdown, ma
 ### Custom paths
 
 ```bash
-python convert_pdf_to_md.py \
+python convert.py \
   --input  /path/to/my/pdfs \
   --output /tmp/md_out \
   --zip    docs_md.zip
@@ -58,7 +58,7 @@ python convert_pdf_to_md.py \
 
 ```
 .
-├─ convert_pdf_to_md.py        # the script
+├─ convert.py        # the script
 ├─ pdfs/                       # your source PDFs (can be nested)
 ├─ markdown/                   # auto‑generated .md files
 └─ markdown.zip                # everything bundled
